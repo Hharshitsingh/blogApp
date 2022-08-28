@@ -42,7 +42,7 @@ const Categories = () => {
                     </Grid>
                     {categories.map(category => (
                         <Grid xs={2} sm={4} md={4} key={category.type}>
-                            <StyledLink to={`/?category=${category.type}`}>
+                            <StyledLink to={`?category=${category.type}`}>
                                 <Item>
                                     {category.type}
                                 </Item>
