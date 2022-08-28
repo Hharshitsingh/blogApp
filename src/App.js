@@ -17,7 +17,7 @@ const PrivateRoute = ({ isAuthenticated, ...props }) => {
     <>
       <Outlet />
     </> : (
-      <Navigate replace to="/login" />
+      <Navigate replace to="/blogApp/login" />
     )
 }
 
@@ -30,34 +30,34 @@ function App() {
       <BrowserRouter>
         <Header isAuthenticated={isAuthenticated} />
         <Routes>
-          <Route path="/" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/" element={<Home />} />
+          <Route path="/blogApp" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp" element={<Home />} />
           </Route>
 
-          <Route path="/create" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/create" element={<CreatePost />} />
+          <Route path="/blogApp/create" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/create" element={<CreatePost />} />
           </Route>
-          <Route path="/post/:id" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/post/:id" element={<DetailPost />} />
+          <Route path="/blogApp/post/:id" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/post/:id" element={<DetailPost />} />
           </Route>
-          <Route path="/updateBlog/:id" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/updateBlog/:id" element={<UpdatePost />} />
+          <Route path="/blogApp/updateBlog/:id" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/updateBlog/:id" element={<UpdatePost />} />
           </Route>
-          <Route path="/about" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/about" element={<About />} />
+          <Route path="/blogApp/about" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/about" element={<About />} />
           </Route>
-          <Route path="/contact" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-
-          <Route path="/profile/:username" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/profile/:username" element={<Profile />} />
+          <Route path="/blogApp/contact" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/contact" element={<Contact />} />
           </Route>
 
-          <Route path="/login" element={<Acccout setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path="/blogApp/profile/:username" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/profile/:username" element={<Profile />} />
+          </Route>
 
-          <Route path="/logout" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/logout" element={<LogoutUser setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path="/blogApp/login" element={<Acccout setIsAuthenticated={setIsAuthenticated} />} />
+
+          <Route path="/blogApp/logout" element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+            <Route path="/blogApp/logout" element={<LogoutUser setIsAuthenticated={setIsAuthenticated} />} />
           </Route>
 
         </Routes>

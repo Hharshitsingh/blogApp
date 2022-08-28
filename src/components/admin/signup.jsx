@@ -45,7 +45,7 @@ const Signup = ({ setIsAuthenticated }) => {
                     username: res.data.username
                 });
                 successNotify('Login Successfully');
-                navigate('/');
+                navigate('/blogApp');
             }).catch(err => {
                 errorNotify(err.message);
             }

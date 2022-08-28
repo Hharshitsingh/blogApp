@@ -27,7 +27,7 @@ const Profile = () => {
             await API.getProfile(username).then(res => {
                 setUser(res.data);
             }).catch(err => {
-                navigate('/');
+                navigate('/blogApp');
             })
         }
         fetchProfile();

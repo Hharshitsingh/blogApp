@@ -52,7 +52,7 @@ const Login = ({ setIsAuthenticated }) => {
                         email: res.data.email
                     });
                     successNotify('Login Successfully');
-                    navigate('/');
+                    navigate('/blogApp');
                 }).catch(err => {
                     errorNotify(err.message);
                 }

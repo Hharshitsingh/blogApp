@@ -108,7 +108,7 @@ const CreatePost = () => {
             return;
         }
         await API.createPost(post).then(res => {
-            navigate('/');
+            navigate('/blogApp');
         }).catch(err => {
             errorNotify(err.message)
         })

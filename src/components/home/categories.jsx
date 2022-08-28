@@ -27,14 +27,14 @@ const Categories = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }} style={{ marginTop: '10px' }}>
                     <Grid xs={2} sm={4} md={4} key="/create">
-                        <StyledLink to={`/create`}>
+                        <StyledLink to={`/blogApp/create`}>
                             <Item style={{ backgroundColor: "#f6bc16" }}>
                                 Create Blog
                             </Item>
                         </StyledLink>
                     </Grid>
                     <Grid xs={2} sm={4} md={4} key="/">
-                        <StyledLink to={"/"}>
+                        <StyledLink to={"/blogApp"}>
                             <Item>
                                 All Categories
                             </Item>
@@ -42,7 +42,7 @@ const Categories = () => {
                     </Grid>
                     {categories.map(category => (
                         <Grid xs={2} sm={4} md={4} key={category.type}>
-                            <StyledLink to={`?category=${category.type}`}>
+                            <StyledLink to={`/?category=${category.type}`}>
                                 <Item>
                                     {category.type}
                                 </Item>

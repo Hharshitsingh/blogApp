@@ -85,7 +85,7 @@ const DetailPost = () => {
 
     const deleteBlog = async () => {
         await API.deletePost(id).then(res => {
-            navigate('/');
+            navigate('/blogApp');
         }).catch(err => {
             errorNotify(err.message)
         })
@@ -99,14 +99,14 @@ const DetailPost = () => {
                 {
                     acc.username === post.username &&
                     <>
-                        <Link to={`/updateBlog/${post._id}`}><EditIcon color="primary" /></Link>
+                        <Link to={`/blogApp/updateBlog/${post._id}`}><EditIcon color="primary" /></Link>
                         <DeleteIcon onClick={() => deleteBlog()} color="error" />
                     </>
                 }
             </Box>
             <Heading>{post.title}</Heading>
             <Author>
-                <Link to={`/profile/${post.username}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/blogApp/profile/${post.username}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Typography>Author: <span style={{ fontWeight: 600 }}>{post.fullname || post.username} </span></Typography>
                 </Link>
                 <Typography style={{ marginLeft: 'auto' }}>{timeStamp(post.createDate)}  </Typography>

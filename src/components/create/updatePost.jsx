@@ -126,7 +126,7 @@ const UpdatePost = () => {
 
         await API.updatePost(post)
             .then(res => {
-                navigate(`/post/${id}`);
+                navigate(`/blogApp/post/${id}`);
             }).catch(err => {
                 errorNotify(err.message)
             }

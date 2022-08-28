@@ -40,14 +40,14 @@ const Header = ({ isAuthenticated }) => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                <Link to={(isAuthenticated) ? `/profile/${acc.username}` : "/"} style = {{textDecoration: 'none', color: 'inherit'}}>
+                <Link to={(isAuthenticated) ? `/blogApp/profile/${acc.username}` : "/"} style = {{textDecoration: 'none', color: 'inherit'}}>
                     {fullname}
                 </Link>
             </Typography>
             <Divider />
 
             <Container2>
-                <Link to={"/"}>
+                <Link to={"/blogApp"}>
                     <ListItem key="Home" disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} >
                             <ListItemText primary="Home" />
@@ -55,7 +55,7 @@ const Header = ({ isAuthenticated }) => {
                     </ListItem>
                 </Link>
 
-                <Link to={"/about"}>
+                <Link to={"/blogApp/about"}>
                     <ListItem key="About" disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} >
                             <ListItemText primary="About" />
@@ -63,7 +63,7 @@ const Header = ({ isAuthenticated }) => {
                     </ListItem>
                 </Link>
 
-                <Link to={"/contact"}>
+                <Link to={"/blogApp/contact"}>
                     <ListItem key="contact" disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} >
                             <ListItemText primary="Contact" />
@@ -73,7 +73,7 @@ const Header = ({ isAuthenticated }) => {
 
                 {
                     (isAuthenticated) ? (
-                        <Link to={"/logout"}>
+                        <Link to={"/blogApp/logout"}>
                             <ListItem key="logout" disablePadding>
                                 <ListItemButton sx={{ textAlign: 'center' }}>
                                     <ListItemText primary="Logout" />
@@ -81,7 +81,7 @@ const Header = ({ isAuthenticated }) => {
                             </ListItem>
                         </Link>
                     ) : (
-                        <Link to={"/login"}>
+                        <Link to={"/blogApp/login"}>
                             <ListItem key="login" disablePadding>
                                 <ListItemButton sx={{ textAlign: 'center' }} >
                                     <ListItemText primary="Login" />
@@ -105,22 +105,22 @@ const Header = ({ isAuthenticated }) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" to="/" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-                        <Link to={(isAuthenticated) ? `/profile/${acc.username}` : "/"} style = {{textDecoration: 'none', color: 'inherit'}}>
+                        <Link to={(isAuthenticated) ? `/blogApp/profile/${acc.username}` : "/"} style = {{textDecoration: 'none', color: 'inherit'}}>
                             {fullname}
                         </Link>
                     </Typography>
                     <Container sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Link to={"/"}>
+                        <Link to={"/blogApp"}>
                             <Button key={"Home"} sx={{ color: '#fff' }} >
                                 Home
                             </Button>
                         </Link>
-                        <Link to={"/about"}>
+                        <Link to={"/blogApp/about"}>
                             <Button key={"About"} sx={{ color: '#fff' }} >
                                 About
                             </Button>
                         </Link>
-                        <Link to={"/contact"}>
+                        <Link to={"/blogApp/contact"}>
                             <Button key={"Contact"} sx={{ color: '#fff' }} >
                                 Contact
                             </Button>
@@ -130,13 +130,13 @@ const Header = ({ isAuthenticated }) => {
 
                         {
                             (isAuthenticated) ? (
-                                <Link to={"/logout"}>
+                                <Link to={"/blogApp/logout"}>
                                     <Button key={"Logout"} sx={{ color: '#fff' }} >
                                         Logout
                                     </Button>
                                 </Link>
                             ) : (
-                                <Link to={"/login"}>
+                                <Link to={"/blogApp/login"}>
                                     <Button key={"Login"} sx={{ color: '#fff' }} >
                                         Login
                                     </Button>

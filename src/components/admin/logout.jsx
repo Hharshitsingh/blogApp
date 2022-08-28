@@ -15,7 +15,7 @@ const LogoutUser = ({ setIsAuthenticated }) => {
             username: ''
         });
         if (!sessionStorage.getItem('accesstoken')) {
-            navigate('/');
+            navigate('/blogApp');
         }
     }, [navigate, setAcc]);
 
