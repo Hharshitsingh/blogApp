@@ -1,7 +1,7 @@
 {
   "name": "blogApp",
   "version": "0.1.0",
-  "homepage": "https://hharshitsingh.github.io",
+  "homepage": "https://hharshitsingh.github.io/blogApp",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
