@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { errorNotify, successNotify } from '../../utils/common-utils';
 
 const Banner = styled(Box)`
-    background-image: url(/images/contact-bg.png);
+    background-image: url(https://raw.githubusercontent.com/Hharshitsingh/blogApp/gh-pages/images/contact-bg.png);
     // width: 100%;
     height: 100vh;
     background-position: center;
