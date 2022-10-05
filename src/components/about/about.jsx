@@ -1,18 +1,17 @@
 import { Box, styled, Typography, FormControl, Grid } from '@mui/material';
 
-const Banner = styled(Box)`
-    background-image: url(https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg);
-    width: 100%;
-    height: 100vh;
-    background-position: left 0px bottom 0px;
-    background-size: cover;
-`;
-
 const Wrapper = styled(Box)`
     padding: 20px;
     & > h3, & > h5 {
         margin-top: 50px;
     }
+`;
+
+const Banner = styled(Box)`
+    background-image: url(https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
 `;
 
 const Text = styled(Typography)`
