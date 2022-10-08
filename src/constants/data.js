@@ -1,7 +1,14 @@
 export const categories = [
     { type: "Art" },
     { type: "Coding" },
-    { type: "Design" },
+
+    { type: "Photography" },
+    { type: "Sports" },
+    { type: "Tech" },
+    { type: "Travel" },
+    { type: "Other" }
+    
+        { type: "Design" },
     { type: "Gaming" },
     { type: "Fashion" },
     { type: "Food" },
@@ -9,9 +16,4 @@ export const categories = [
     { type: "Music" },
     { type: "Nature" },
     {type: "Painting"},
-    { type: "Photography" },
-    { type: "Sports" },
-    { type: "Tech" },
-    { type: "Travel" },
-    { type: "Other" }
 ];
