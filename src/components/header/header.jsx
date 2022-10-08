@@ -46,13 +46,7 @@ const Header = ({ isAuthenticated }) => {
             </Typography>
             <Divider />
 
-            <Container2>
-                <Link to={"/blogApp"}>
-                    <ListItem key="Home" disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} >
-                            <ListItemText primary="Home" />
-                        </ListItemButton>
-                    </ListItem>
+
                 </Link>
 
                 <Link to={"/blogApp/about"}>
@@ -63,6 +57,13 @@ const Header = ({ isAuthenticated }) => {
                     </ListItem>
                 </Link>
 
+            <Container2>
+                <Link to={"/blogApp"}>
+                    <ListItem key="Home" disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }} >
+                            <ListItemText primary="Home" />
+                        </ListItemButton>
+                    </ListItem>
                 <Link to={"/blogApp/contact"}>
                     <ListItem key="contact" disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} >
