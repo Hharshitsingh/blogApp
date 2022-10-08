@@ -25,17 +25,6 @@ axiosInstance.interceptors.request.use(
     }
 );
 
-axiosInstance.interceptors.response.use(
-    function (response) {
-        // Stop global loader here
-        return processResponse(response);
-    },
-    function (error) {
-        // Stop global loader here
-        return Promise.reject(processError(error));
-    }
-)
-
 const processResponse = (response) => {
     if (response?.status === 200) {
         return {
@@ -49,6 +38,18 @@ const processResponse = (response) => {
             message: response?.message,
             code: response?.code
         }
+        
+        axiosInstance.interceptors.response.use(
+    function (response) {
+        // Stop global loader here
+        return processResponse(response);
+    },
+    function (error) {
+        // Stop global loader here
+        return Promise.reject(processError(error));
+    }
+)
+
     }
 }
 
