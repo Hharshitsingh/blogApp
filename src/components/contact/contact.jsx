@@ -21,10 +21,6 @@ const Wrapper = styled(Box)`
     }
 `;
 
-const Text = styled(Typography)`
-    color: #878787;
-`;
-
 const contctIntial = {
     name: '',
     email: '',
@@ -32,13 +28,15 @@ const contctIntial = {
     timestamp: Date.now()
 }
 
+const Text = styled(Typography)`
+    color: #878787;
+`;
+
 const Contact = () => {
 
     const [contact, setContact] = useState(contctIntial);
 
-    const handleChange = (e) => {
-        setContact({ ...contact, [e.target.name]: e.target.value });
-    }
+   
 
     const handleSubmit = async (e) => {
         if (contact.name === '' || contact.email === '' || contact.message === '') {
@@ -52,6 +50,10 @@ const Contact = () => {
             })
 
         }
+    }
+    
+     const handleChange = (e) => {
+        setContact({ ...contact, [e.target.name]: e.target.value });
     }
 
 
