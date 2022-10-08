@@ -14,5 +14,4 @@ export const categories = [
     { type: "Fashion" },
     { type: "Food" },
     { type: "Movies" },
-
 ];
