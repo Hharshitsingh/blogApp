@@ -13,13 +13,13 @@ export const API_NOTIFICATION_MESSAGES = {
         title: "Error",
         message: "Operation failed, Try again later"
     },
-    requestFailure: {
-        title: "Error",
-        message: "Request failed, Try again later"
-    },
     unauthorized: {
         title: "Error",
         message: "Unauthorized"
+    },
+    requestFailure: {
+        title: "Error",
+        message: "Request failed, Try again later"
     },
     notFound: {
         title: "Error",
